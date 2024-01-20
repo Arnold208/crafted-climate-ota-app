@@ -33,7 +33,7 @@ const Devices = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:3000/add/list-OTA-devices');
+            const response = await fetch('http://localhost:3000/ota/list-OTA-devices');
             const data = await response.json();
             setDevices(data);
         };
@@ -66,7 +66,7 @@ const Devices = () => {
         };
     
         try {
-          const response = await fetch('http://localhost:3000/add/add-OTA-device', {
+          const response = await fetch('http://localhost:3000/ota/add-OTA-device', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
